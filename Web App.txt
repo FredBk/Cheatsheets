@@ -1,0 +1,31 @@
+-> WebDAV:
+	-> make request with OPTIONS header in Burp
+		-> if the response gives a lot of methods there is probably WebDAV enabled
+	-> use: cadaver (a WebDAV client on Kali Linux)
+		-> cadaver http://xxxxx.com
+	-> use: davtest
+
+
+-> HTTP Verb to test:
+	COPY, DELETE, GET, HEAD, LOCK, MOVE, OPTIONS, POST, PROPFIND, PROPPATCH, PUT, REPORT, UNLOCK, TRACE
+
+
+-> Pentest externe:
+
+	-> Changer le user agent de dirbuster (si ca ne passe pas)
+
+	-> créer un dictionnaire personnalisé: tools Crunch
+
+-> Méthodo:
+
+-Identifier les points d'injection
+-Vérifier la présence d'un WAF
+-Scan nmap
+-Tomcat: lfi des fichiers de confs du server
+-Exposition du tomcat manager: /manager/html
+-Avec un compte client:
+	-tester le cloisonnement horizontal, vertical
+	-tester l'upload: peut on uploader n'importe quoi, où c'est stocké, 
+
+
+Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern

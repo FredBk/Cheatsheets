@@ -1,0 +1,33 @@
+Reverse the apk:
+	-> d2j-dex2jar test.apk
+	-> use jd-gui to read the code
+	-> use IDA pro
+
+	-> unzip the .apk and check the folders and files
+
+	Apktool:
+	-> apktool d myapp.apk -o extractedFolder
+
+Dynamical Analyses:
+	-> Use Burp to intercept the requests
+	
+
+Bypass SSL pinning:
+	-> https://blog.netspi.com/four-ways-bypass-android-ssl-verification-certificate-pinning/
+
+FRamework:
+	-> instal frida-tools
+
+Using ADB:
+	-> adb devices (check the device)
+	-> adb install test.apk (install the .apk on the device)
+	-> adb shell	(execute cmd on the device)
+	-> adb uninstall com.company.apppackage  (remove .apk)
+	-> adb install <path to apk> 	(install .apk on device)
+
+
+
+Android processor architecture:
+	-> ARM
+	-> Intel
+	-> MIPS
