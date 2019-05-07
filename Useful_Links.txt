@@ -76,3 +76,6 @@ Youtube channels	-> https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w
 PE backdooring and AV evasion	->  https://www.matteomalvica.com/tutorials/2018/01/17/AV-Evasion/
 								->	https://pentest.blog/art-of-anti-detection-2-pe-backdoor-manufacturing/
 
+Windows OS explanations & pentest	->	https://ired.team/offensive-security/windows-namedpipes-privilege-escalation
+
+
