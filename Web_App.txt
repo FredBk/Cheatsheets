@@ -18,14 +18,18 @@
 
 -> Méthodo:
 
--Identifier les points d'injection
--Vérifier la présence d'un WAF
--Scan nmap
--Tomcat: lfi des fichiers de confs du server
--Exposition du tomcat manager: /manager/html
--Avec un compte client:
-	-tester le cloisonnement horizontal, vertical
-	-tester l'upload: peut on uploader n'importe quoi, où c'est stocké, 
+	-Identifier les points d'injection
+	-Vérifier la présence d'un WAF
+	-Scan nmap
+	-Tomcat: lfi des fichiers de confs du server
+	-Exposition du tomcat manager: /manager/html
+	-Avec un compte client:
+		-tester le cloisonnement horizontal, vertical
+		-tester l'upload: peut on uploader n'importe quoi, où c'est stocké, 
 
 
 Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern
+
+
+-> dotdotpwn (testing the path traversal):
+	-> dotdotpwn.pl -m http -h 192.168.1.1 -M GET

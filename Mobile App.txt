@@ -5,11 +5,17 @@ Reverse the apk:
 
 	-> unzip the .apk and check the folders and files
 
+	-> on Windowas: use jdax-gui
+
 	Apktool:
 	-> apktool d myapp.apk -o extractedFolder
 
 Dynamical Analyses:
 	-> Use Burp to intercept the requests
+
+	-> https://support.portswigger.net/customer/portal/articles/1841101-configuring-an-android-device-to-work-with-burp
+
+	-> https://support.portswigger.net/customer/portal/articles/1841102-Mobile%20Set-up_Android%20Device%20-%20Installing%20CA%20Certificate.html
 	
 
 Bypass SSL pinning:
@@ -24,6 +30,11 @@ Using ADB:
 	-> adb shell	(execute cmd on the device)
 	-> adb uninstall com.company.apppackage  (remove .apk)
 	-> adb install <path to apk> 	(install .apk on device)
+	-> adb push <myfile> <remote path> (push a file on the device)
+
+
+Scan the App:
+	-> MobSF: https://github.com/MobSF/Mobile-Security-Framework-MobSF
 
 
 
