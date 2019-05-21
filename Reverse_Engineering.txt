@@ -30,6 +30,16 @@ GDB Commands:
 	-> (gdb) x/s 0x4006da			=> print the content of the address 0x4006da
 	-> (gdb) shell echo 0x65617379 | xxd -r;echo  			=> convert hex value to ASCII
 
+	-> (gdb) x/32x $esp 	=> 	examine $esp and print 32 double-words in hexadecimal format
+	-> (gdb) x/s 0xbffffc60 + 12 	=>	print the content of the address at the offset + 12
+	-> (gdb) info address myvar		=>	print the address of teh variable myvar
+	-> (gdb) x/x $esp + 92			=> print the content of $esp with an offset of + 92
+	-> (gdb) p 0xbffffcac - 0xbffffc6c		=>	calculate the number of bytes (example of byte: 0x45) between the two addresses
+
+	-> (gdb) find 0xb7e97000, +9999999, "/bin/sh"		=>	search the address of /bin/sh in this range of addresses (libc.so)
+	-> (gdb) strings -a -t x /lib/libc-2.11.2.so | grep "/bin/sh" 	=>	find the offset of /bin/sh 
+
+
 
 Analyse a file:
 	-> file myfile
@@ -72,3 +82,5 @@ Parser Differential:
 Check the Endianness on Linux:
 	-> lscpu
 
+Check the architecture:
+	-> uname -a 	->  if i686 => 32 bits

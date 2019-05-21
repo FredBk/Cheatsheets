@@ -78,4 +78,8 @@ PE backdooring and AV evasion	->  https://www.matteomalvica.com/tutorials/2018/0
 
 Windows OS explanations & pentest	->	https://ired.team/offensive-security/windows-namedpipes-privilege-escalation
 
+Upgrade shells	->	https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/
+
+
+Hardware devices for pentest and Red Team 		-> 		https://github.com/yadox666/The-Hackers-Hardware-Toolkit
 

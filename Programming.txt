@@ -16,4 +16,8 @@
 	http://book.pythontips.com/en/latest/python_c_extension.html
 
 	
+	-> Python website framework:
+	http://docs.getpelican.com/en/stable/publish.html
+
+	
 	

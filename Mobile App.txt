@@ -27,7 +27,7 @@ FRamework:
 Using ADB:
 	-> adb devices (check the device)
 	-> adb install test.apk (install the .apk on the device)
-	-> adb shell	(execute cmd on the device)
+	-> adb shell	(execute cmd on the device) 
 	-> adb uninstall com.company.apppackage  (remove .apk)
 	-> adb install <path to apk> 	(install .apk on device)
 	-> adb push <myfile> <remote path> (push a file on the device)

@@ -68,7 +68,7 @@ List screen sessions	->	screen -ls
 Attach a screen session		->	screen -r [111111]
 Kill a session 		->		screen -X -S [111122] quit
 
-
+Grep exactly the pattern	->		grep -w "deiauk" textfile
 
 
 

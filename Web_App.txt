@@ -31,5 +31,16 @@
 Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern
 
 
--> dotdotpwn (testing the path traversal):
+[*] dotdotpwn
+	-> testing the path traversal
 	-> dotdotpwn.pl -m http -h 192.168.1.1 -M GET
+
+	
+[*] XSSHunter
+
+[*] tplmap.py
+	-> testing the Server Side template injection
+
+[*] commix
+	-> testing the command injection
+
