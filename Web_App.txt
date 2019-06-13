@@ -44,3 +44,8 @@ Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern
 [*] commix
 	-> testing the command injection
 
+
+-> AngularJS
+
+-> Xampp
+	-> folder and webpages are accessible in the folder htdocs/

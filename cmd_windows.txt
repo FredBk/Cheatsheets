@@ -112,3 +112,10 @@ services control panel		->	services.msc
 task manager	->	taskmgr.exe
 security policy manager		->	secpool.msc
 event viewer		->		eventvwr.msc
+
+
+find a file (here all flags, from the C:\ directory to be at the root)		->	cd C:\ && find flag* /s
+list all schedule tasks		->		schtasks
+							->		schtasks /query /fo LIST /v
+
+

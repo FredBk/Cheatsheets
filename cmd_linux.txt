@@ -71,6 +71,20 @@ Kill a session 		->		screen -X -S [111122] quit
 Grep exactly the pattern	->		grep -w "deiauk" textfile
 
 
+DNS Zone transfer	-> host -t axfr target.domain.name target-dns-server
+					-> dig axfr @target-dns-server target.domain.name
+
+
+Check connection status (count)		->	netstat -tan | awk '{print $6}' | sort | uniq -c
+									->	ss -s	
+
+
+
+
+
+
+
+
 
 
 

@@ -83,3 +83,11 @@ Upgrade shells	->	https://blog.ropnop.com/upgrading-simple-shells-to-fully-inter
 
 Hardware devices for pentest and Red Team 		-> 		https://github.com/yadox666/The-Hackers-Hardware-Toolkit
 
+CTF web write-up		->		https://pequalsnp-team.github.io/cheatsheet/flask-jinja2-ssti
+
+Red Team toolkit		-> 		https://github.com/shr3ddersec/Shr3dKit
+
+SMB relay		->		https://pentestlab.blog/tag/smb-relay/
+
+
+
