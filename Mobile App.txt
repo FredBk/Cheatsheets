@@ -7,6 +7,8 @@ Reverse the apk:
 
 	-> on Windowas: use jdax-gui
 
+	-> (complete decompiling): ava -jar apktool_2.3.3.jar d <apk>
+
 	Apktool:
 	-> apktool d myapp.apk -o extractedFolder
 

@@ -89,5 +89,8 @@ Red Team toolkit		-> 		https://github.com/shr3ddersec/Shr3dKit
 
 SMB relay		->		https://pentestlab.blog/tag/smb-relay/
 
+Linux local enumeration (interesting files, configs, ... )		->		https://github.com/rebootuser/LinEnum
+
+Heap spraying 		-> 	https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/
 
 

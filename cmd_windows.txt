@@ -119,3 +119,6 @@ list all schedule tasks		->		schtasks
 							->		schtasks /query /fo LIST /v
 
 
+[*]	PowerShell
+
+
