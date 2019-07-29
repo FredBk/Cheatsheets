@@ -78,7 +78,15 @@ DNS Zone transfer	-> host -t axfr target.domain.name target-dns-server
 Check connection status (count)		->	netstat -tan | awk '{print $6}' | sort | uniq -c
 									->	ss -s	
 
+List SUID binaries	->	find / -perm -u=s -type f 2>/dev/null
 
+Create a list from the words on a web page	->	cewl http://test.com > dict.txt
+
+Get git repository from a web server	->	gitdumper.sh http://test.com/.git/
+
+AWS list	->	s3 ls s3://mytest
+
+AWS copy file	->	s3 cp s3://mytest/myfile /tmp/myfile
 
 
 

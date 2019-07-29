@@ -93,4 +93,16 @@ Linux local enumeration (interesting files, configs, ... )		->		https://github.c
 
 Heap spraying 		-> 	https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/
 
+Youtube CTFs Write-UP channel	->	https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA
+
+Citrix Escaping		->		https://www.pentestpartners.com/security-blog/breaking-out-of-citrix-and-other-restricted-desktop-environments/
+
+
+CTF internal network 	->	https://akerva.com/blog/wonkachall-2-lehack-2019-write-up-part-2-windows/
+
+Malware Analysis mindmap	->	https://www.kondah.com/malware-mindmind/
+
+PowerSploit	->	https://github.com/PowerShellMafia/PowerSploit
+
+
 
