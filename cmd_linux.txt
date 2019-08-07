@@ -89,10 +89,13 @@ AWS list	->	s3 ls s3://mytest
 AWS copy file	->	s3 cp s3://mytest/myfile /tmp/myfile
 
 
+Get ACL of a file		->	getfacl myfile
 
+Mount a share	->	mount -t nfs 192.x.x.x:/remote/path/ /tmp/folder/
 
+Display Metadata pdf 	->	pdfinfo file.pdf
 
-
+	
 
 
 
