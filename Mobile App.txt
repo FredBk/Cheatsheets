@@ -21,10 +21,14 @@ Dynamical Analyses:
 	
 
 Bypass SSL pinning:
-	-> https://blog.netspi.com/four-ways-bypass-android-ssl-verification-certificate-pinning/
+	-> Android: https://blog.netspi.com/four-ways-bypass-android-ssl-verification-certificate-pinning/
+
+	-> iOS: https://blog.netspi.com/four-ways-to-bypass-ios-ssl-verification-and-certificate-pinning/
 
 FRamework:
 	-> instal frida-tools
+
+	-> https://github.com/frida/frida/releases
 
 Using ADB:
 	-> adb devices (check the device)
@@ -34,6 +38,8 @@ Using ADB:
 	-> adb install <path to apk> 	(install .apk on device)
 	-> adb push <myfile> <remote path> (push a file on the device)
 
+On the Phone/iPad:
+	-> get the files concerning the application: grep -rnwi / -e "NameOfApp" > myfile
 
 Scan the App:
 	-> MobSF: https://github.com/MobSF/Mobile-Security-Framework-MobSF
@@ -44,3 +50,9 @@ Android processor architecture:
 	-> ARM
 	-> Intel
 	-> MIPS
+
+Android:
+	-> check the stack smashing protection:
+		find . -name "*.so" -exec pwn checksec --file {} \;
+
+	->

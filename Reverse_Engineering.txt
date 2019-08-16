@@ -84,3 +84,6 @@ Check the Endianness on Linux:
 
 Check the architecture:
 	-> uname -a 	->  if i686 => 32 bits
+
+
+	
