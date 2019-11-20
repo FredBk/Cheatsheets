@@ -95,7 +95,10 @@ Mount a share	->	mount -t nfs 192.x.x.x:/remote/path/ /tmp/folder/
 
 Display Metadata pdf 	->	pdfinfo file.pdf
 
-	
+Grep line which contains a string	->	grep -E 'hello|world|tester' abc.log
+
+Grep line which not contains a string	->	grep -v 'test' abc.log
+
 
 
 

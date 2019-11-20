@@ -1,0 +1,12 @@
+[*] Windows 10.10.10.130
+
+	-> 
+
+
+
+[*] Windows 10.10.10.134  - https://www.youtube.com/watch?v=2j3FNp5pjQ4&list=PLidcsTyj9JXL4Jv6u9qi8TcUgsNoKKHNn
+
+	-> nmap -sC -sV -oA nmap/bastion 10.10.10.134
+	-> smbclient -L //10.10.10.134
+	-> mount -t cifs //10.10.10.134/Backups /mnt/test
+	-> smbmap -u RandomUser -H 10.10.10.134

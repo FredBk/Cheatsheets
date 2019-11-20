@@ -49,3 +49,6 @@ Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern
 
 -> Xampp
 	-> folder and webpages are accessible in the folder htdocs/
+
+-> Waf Bypass:
+	-> use censys.io to retrieve original ip from a website

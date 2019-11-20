@@ -17,7 +17,9 @@ Dynamical Analyses:
 
 	-> https://support.portswigger.net/customer/portal/articles/1841101-configuring-an-android-device-to-work-with-burp
 
-	-> https://support.portswigger.net/customer/portal/articles/1841102-Mobile%20Set-up_Android%20Device%20-%20Installing%20CA%20Certificate.html
+	-> Android: https://support.portswigger.net/customer/portal/articles/1841102-Mobile%20Set-up_Android%20Device%20-%20Installing%20CA%20Certificate.html
+
+	-> IOS: https://support.portswigger.net/customer/portal/articles/1841109-installing-burp-s-ca-certificate-in-an-ios-device
 	
 
 Bypass SSL pinning:
@@ -25,10 +27,10 @@ Bypass SSL pinning:
 
 	-> iOS: https://blog.netspi.com/four-ways-to-bypass-ios-ssl-verification-and-certificate-pinning/
 
-FRamework:
-	-> instal frida-tools
+Framework:
+	-> install frida-tools (https://www.frida.re/docs/installation/)
 
-	-> https://github.com/frida/frida/releases
+	-> install frida server https://github.com/frida/frida/releases
 
 Using ADB:
 	-> adb devices (check the device)
@@ -44,8 +46,6 @@ On the Phone/iPad:
 Scan the App:
 	-> MobSF: https://github.com/MobSF/Mobile-Security-Framework-MobSF
 
-
-
 Android processor architecture:
 	-> ARM
 	-> Intel
@@ -55,4 +55,9 @@ Android:
 	-> check the stack smashing protection:
 		find . -name "*.so" -exec pwn checksec --file {} \;
 
-	->
+iOS default ssh password: alpine
+
+iOS DCIM directory	->	/private/var/mobile/Media/DCIM/
+
+Application path	->		/var/containers/Bundle/Application/
+
