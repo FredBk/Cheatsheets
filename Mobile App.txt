@@ -32,6 +32,32 @@ Framework:
 
 	-> install frida server https://github.com/frida/frida/releases
 
+Frida Framework:
+	Android (rooted):
+		-> adb shell getprop ro.product.cpu.abi 
+		-> download the correct Frida server: https://github.com/frida/frida/releases 
+		-> adb push frida-server-12.2.29-android-arm64 /data/local/tmp/ 
+		-> adb shell "chmod 755 /data/local/tmp/frida-server-12.2.29-android-arm64 " 
+		-> adb shell 
+		-> (on Device) su 
+		-> (on Device) /data/local/tmp/frida-server-12.2.29-android-arm64 & 
+		-> (on Kali) frida-ps -U
+
+	IoS (JailBroken):
+		-> (on Device through ssh) uname -a
+		-> download the correct frida server: https://github.com/frida/frida/releases 
+		-> (on Kali) scp frida-server-12.2.29-android-arm64 <username>@<ip>:<path to destination> 
+		-> (on Device )chmod 755 frida-server-12.2.29-android-arm64 
+		-> (on Device) ./frida-server-12.2.29-android-arm64 & 
+		-> (on Kali) frida-ps -U
+
+MobSF Framework:
+	-> git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF
+	-> ./setup.sh && ./run.sh
+	-> access page: http://localhost:8000
+	-> for dynamical analysis use genymotion
+
+
 Using ADB:
 	-> adb devices (check the device)
 	-> adb install test.apk (install the .apk on the device)
@@ -39,6 +65,7 @@ Using ADB:
 	-> adb uninstall com.company.apppackage  (remove .apk)
 	-> adb install <path to apk> 	(install .apk on device)
 	-> adb push <myfile> <remote path> (push a file on the device)
+
 
 On the Phone/iPad:
 	-> get the files concerning the application: grep -rnwi / -e "NameOfApp" > myfile
@@ -60,4 +87,9 @@ iOS default ssh password: alpine
 iOS DCIM directory	->	/private/var/mobile/Media/DCIM/
 
 Application path	->		/var/containers/Bundle/Application/
+
+
+Dynamical Analysis link	-> https://medium.com/@ansjdnakjdnajkd/dynamic-analysis-of-ios-apps-wo-jailbreak-1481ab3020d8
+
+
 

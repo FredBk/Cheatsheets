@@ -1,4 +1,4 @@
--> WebDAV:
+[*] WebDAV:
 	-> make request with OPTIONS header in Burp
 		-> if the response gives a lot of methods there is probably WebDAV enabled
 	-> use: cadaver (a WebDAV client on Kali Linux)
@@ -6,17 +6,17 @@
 	-> use: davtest
 
 
--> HTTP Verb to test:
+[*] HTTP Verb to test:
 	COPY, DELETE, GET, HEAD, LOCK, MOVE, OPTIONS, POST, PROPFIND, PROPPATCH, PUT, REPORT, UNLOCK, TRACE
 
 
--> Pentest externe:
+[*] Pentest externe:
 
 	-> Changer le user agent de dirbuster (si ca ne passe pas)
 
 	-> créer un dictionnaire personnalisé: tools Crunch
 
--> Méthodo:
+[*] Méthodo:
 
 	-Identifier les points d'injection
 	-Vérifier la présence d'un WAF
@@ -28,7 +28,7 @@
 		-tester l'upload: peut on uploader n'importe quoi, où c'est stocké, 
 
 
-Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern
+[*] Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern
 
 
 [*] dotdotpwn
@@ -45,10 +45,14 @@ Notes sublimetext: utiliser alt+F3 pour modifier tout un pattern
 	-> testing the command injection
 
 
--> AngularJS
+[*] AngularJS
 
--> Xampp
+[*] Xampp
 	-> folder and webpages are accessible in the folder htdocs/
 
--> Waf Bypass:
+[*] Waf Bypass:
 	-> use censys.io to retrieve original ip from a website
+
+
+[*] Burp Suite:
+	-> Extensions: Additional CSRF Checks, Bypass WAF, Heartbleed, JSON Beautifier, JSON Web Tokens, JOSEPH, Kerberos Authentication, psychoPATH, SAML Raider Certificates, Wsdler, Session Auth, AWS Security Checks, Auto-Repeater, Authorize

@@ -67,6 +67,7 @@ Detach a screen session 	-> CRTL + A + D
 List screen sessions	->	screen -ls
 Attach a screen session		->	screen -r [111111]
 Kill a session 		->		screen -X -S [111122] quit
+Give a name to session	->	screen -S myname
 
 Grep exactly the pattern	->		grep -w "deiauk" textfile
 
@@ -99,6 +100,9 @@ Grep line which contains a string	->	grep -E 'hello|world|tester' abc.log
 
 Grep line which not contains a string	->	grep -v 'test' abc.log
 
+Find a file in all current and subfolders	->	find . -name "foo*"
+
+Find a directory	->	find / -type d -name 'myfolder'
 
 
 
