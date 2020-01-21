@@ -1,4 +1,4 @@
-Cheat Sheet :
+ Cheat Sheet :
 
 Supprimer packet linux → sudo apt-get purge --auto-remove packagename
 Afficher connexions → sudo netstat -laputenv
