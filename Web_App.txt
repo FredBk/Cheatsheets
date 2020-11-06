@@ -56,3 +56,7 @@
 
 [*] Burp Suite:
 	-> Extensions: Additional CSRF Checks, Bypass WAF, Heartbleed, JSON Beautifier, JSON Web Tokens, JOSEPH, Kerberos Authentication, psychoPATH, SAML Raider Certificates, Wsdler, Session Auth, AWS Security Checks, Auto-Repeater, Authorize
+
+[*] jwtcat.py:
+	-> Crack a jwt token:
+		-> python3 jwtcat.py -t [1st_part_token].[2nd_part_token] -w /usr/share/wordlists/rockyou.txt 

@@ -1,6 +1,3 @@
--> video to see 23
-
-
 - Exec ipconfig and write in file, then open it:
 	-> PS C:\> ipconfig | Out-File -FilePath C:\IPtxt.txt; c:\iptxt.txt
 

@@ -74,6 +74,9 @@ Cmds:
 
 	Show file proof.txt windows	->	c:\Users\admin\Desktop> type proof.txt
 
+	Start Metasploit database	-> systemctl start postgresql
+								-> msfdb init
+
 
 
 MiB Values:

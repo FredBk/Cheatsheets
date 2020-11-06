@@ -112,3 +112,4 @@ Pwn DB ->	http://pwndb2am4tzkvold.onion/
 
 MySQL CLi cheatsheets	->	https://gist.github.com/hofmannsven/9164408
 
+Reverse Shell Generator		-> 	https://weibell.github.io/reverse-shell-generator/

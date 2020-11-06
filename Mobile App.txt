@@ -5,12 +5,15 @@ Reverse the apk:
 
 	-> unzip the .apk and check the folders and files
 
-	-> on Windowas: use jdax-gui
+	-> on Windows: use jdax-gui
 
 	-> (complete decompiling): ava -jar apktool_2.3.3.jar d <apk>
 
 	Apktool:
 	-> apktool d myapp.apk -o extractedFolder
+
+Reverse .ipa file:
+	-> https://reverseengineering.stackexchange.com/questions/1594/possibilities-for-reverse-engineering-an-ipa-file-to-its-source	
 
 Dynamical Analyses:
 	-> Use Burp to intercept the requests
@@ -50,6 +53,8 @@ Frida Framework:
 		-> (on Device )chmod 755 frida-server-12.2.29-android-arm64 
 		-> (on Device) ./frida-server-12.2.29-android-arm64 & 
 		-> (on Kali) frida-ps -U
+		-> (on Kali) frida-ps -Uai
+		-> (on Kali) python3 fridump.py -s -U NameOfApp
 
 MobSF Framework:
 	-> git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF
@@ -65,6 +70,9 @@ Using ADB:
 	-> adb uninstall com.company.apppackage  (remove .apk)
 	-> adb install <path to apk> 	(install .apk on device)
 	-> adb push <myfile> <remote path> (push a file on the device)
+
+	- Get file from rooted phone:
+		-> adb -d shell "su -c cat /sbin/.magisk/mirror/data/data/xx.com.xxxapp.xxx/app_webview/Default/databases/file__0/1" > data_android.db
 
 
 On the Phone/iPad:
@@ -91,5 +99,27 @@ Application path	->		/var/containers/Bundle/Application/
 
 Dynamical Analysis link	-> https://medium.com/@ansjdnakjdnajkd/dynamic-analysis-of-ios-apps-wo-jailbreak-1481ab3020d8
 
+Mobile App Analysis Platform -> https://github.com/m0bilesecurity/RMS-Runtime-Mobile-Security
+
+Objection & Frida:
+	- Using Frida tools to get the PID of the target app:
+		-> frida-ps -ai -H 192.168.99.242:19999   (in case of remote frida server)
+		-> frida-ps -Uai      (in case of usb connected frida server)
+
+	- Connect to remote frida server with custom port (pid of app is 1983 here):
+		-> objection -N --host 192.168.99.242 --port 19999 -g 1983 explore
+
+	- Objection dumping memory:
+		-> memory dump all dump.txt
+		-> string dump.txt > strings.txt 
+
+	- Objection runtime injection test:
+		-> ios ui alert "injection test"
 
 
+Logs reading:
+	- Android:
+		-> adb logcat
+
+	- iOS:
+		-> use itools on Windows
