@@ -119,19 +119,19 @@ Mobile App Analysis Platform -> https://github.com/m0bilesecurity/RMS-Runtime-Mo
 
 Objection & Frida:
 	- Using Frida tools to get the PID of the target app:
-<<<<<<< HEAD
+
 		-> frida-ps -ai -H 192.168.99.242:27043   (in case of remote frida server)
 		-> frida-ps -Uai      (in case of usb connected frida server)
 
 	- Connect to remote frida server with custom port (pid of app is 1983 here):
 		-> objection -N --host 192.168.99.242 --port 27043 -g 1983 explore
-=======
+
 		-> frida-ps -ai -H 192.168.99.242:19999   (in case of remote frida server)
 		-> frida-ps -Uai      (in case of usb connected frida server)
 
 	- Connect to remote frida server with custom port (pid of app is 1983 here):
 		-> objection -N --host 192.168.99.242 --port 19999 -g 1983 explore
->>>>>>> c7307374eb2896f59455988ccbaf90dbd7f6b6f0
+
 
 	- Objection dumping memory:
 		-> memory dump all dump.txt
