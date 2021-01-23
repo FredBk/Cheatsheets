@@ -104,6 +104,8 @@ Find a file in all current and subfolders	->	find . -name "foo*"
 
 Find a directory	->	find / -type d -name 'myfolder'
 
+Decode zip encoded text		->	echo -n "H4sIAMvOiV4A/wVAIQ0AAAjLwh4Gi3gFBAIuqf9xtimk6i8M0yWJIw0AAAA=" | base64 -d | gunzip -c
+
 
 
 

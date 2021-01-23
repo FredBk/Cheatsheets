@@ -121,6 +121,14 @@ list all schedule tasks		->		schtasks
 Add a folder to the path -> setx path "%path%;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64"
 Remove folder from path ->	set path=%path:C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64=%
 
+Run As (equivalent of sudo) -> runas /noprofile /user:Administrator cmd
+
+Dhcp renew:
+	-> ipconfig /release
+	-> ipconfig /renew
+
+Windows cmd easily : https://wadcoms.github.io/#
+
 
 [*]	PowerShell
 

