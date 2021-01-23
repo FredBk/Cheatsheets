@@ -123,12 +123,15 @@ Remove folder from path ->	set path=%path:C:\Program Files (x86)\Windows Kits\10
 
 Run As (equivalent of sudo) -> runas /noprofile /user:Administrator cmd
 
+<<<<<<< HEAD
 Dhcp renew:
 	-> ipconfig /release
 	-> ipconfig /renew
 
 Windows cmd easily : https://wadcoms.github.io/#
 
+=======
+>>>>>>> c7307374eb2896f59455988ccbaf90dbd7f6b6f0
 
 [*]	PowerShell
 
