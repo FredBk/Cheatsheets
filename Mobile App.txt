@@ -30,6 +30,9 @@ Bypass SSL pinning:
 
 	-> iOS: https://blog.netspi.com/four-ways-to-bypass-ios-ssl-verification-and-certificate-pinning/
 
+Bypass root/jailbreak detection:
+	-> iOS: https://medium.com/@GowthamR1/jailbreak-detection-bypass-using-libertylite-tweak-8b27d24f4125
+
 Framework:
 	-> install frida-tools (https://www.frida.re/docs/installation/)
 

@@ -46,6 +46,8 @@ Location Exploits Kali:
 
 Cmds:
 
+	Start windows cmd under another user (runas) -> runas /user:myuser cmd.exe
+
 	enum shares	->	nbtscan
 
 	connect to share null session (empty password)	->	rpcclient -U "" 192.168.x.x
