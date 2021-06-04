@@ -1,0 +1,135 @@
+Command details:
+	-> https://www.freqtrade.io/en/latest/
+
+
+Update Freqtrade:
+	-> $ ./setup.sh
+		usage:
+        -i,--install    Install freqtrade from scratch
+        -u,--update     Command git pull to update.
+        -r,--reset      Hard reset your develop/stable branch.
+        -c,--config     Easy config generator (Will override your existing file).
+
+
+Trade a strategy:
+	-> freqtrade trade -c config_BBRSI.json --strategy BBRSI_Strategy
+
+	-> freqtrade trade -c config.json --strategy Strategy004
+
+	-> freqtrade trade -c config.json.staticList --strategy Strategy003
+
+	Specify custom strategy location:
+		-> freqtrade --strategy AwesomeStrategy --strategy-path /some/directory
+
+
+Backtesting:
+	- With 5 min tickers (Per default):
+		-> freqtrade backtesting
+
+	- With 1 min tickers:
+		-> freqtrade backtesting --ticker-interval 1m
+
+	- Update cached pairs with the latest data:
+		-> freqtrade backtesting --refresh-pairs-cached
+
+	- With live data (do not alter your testdata files):
+		-> freqtrade backtesting --live
+
+	- Using a different on-disk ticker-data source:
+		-> freqtrade backtesting --datadir freqtrade/tests/testdata-20180101
+
+	- With a (custom) strategy file:
+		-> freqtrade -s TestStrategy backtesting
+
+	- Exporting trades to file:
+		-> freqtrade backtesting --export trades
+
+	- Exporting trades to file specifying a custom filename:
+		-> freqtrade backtesting --export trades --export-filename=backtest_teststrategy.json
+
+	- Running backtest with smaller testset (here with last 200 timeframes);
+		-> freqtrade backtesting --timerange=-200
+
+	- Downloading new set of ticker data:
+		-> mkdir -p user_data/data/binance
+		   cp freqtrade/tests/testdata/pairs.json user_data/data/binance
+		   python scripts/download_backtest_data.py --exchange binance
+
+	- Backtesting multiple strategies (in the same directory);
+		-> freqtrade backtesting --timerange 20180401-20180410 --ticker-interval 5m --strategy-list Strategy001 Strategy002 --export trades
+
+
+Hyperopt module:
+	-> freqtrade hyperopt --strategy BBRSI_Strategy --hyperopt BBRSI_Hyperopt --config config_BBRSI.json --hyperopt-loss SharpeHyperOptLoss -e 5000 --spaces all -v
+
+
+	-> freqtrade hyperopt --strategy BBRSI_Strategy --hyperopt BBRSI_Hyperopt -e 5000 --spaces all --config config_BBRSI.json --hyperopt-loss SharpeHyperOptLoss
+
+
+	-> freqtrade hyperopt --hyperopt BBRSI_Hyperopt -e 5000 --spaces all --config config_BBRSI.json --hyperopt-loss SharpeHyperOptLoss
+
+
+	-> freqtrade hyperopt --hyperopt BBRSI_Hyperopt --spaces roi stoploss trailing  --config config_BBRSI_hyperopt.json  -e 5000 --hyperopt-loss SharpeHyperOptLoss --strategy BBRSI_Strategy
+
+	-> freqtrade -c config.json hyperopt --customhyperopt <hyperoptname> -e 5000 --spaces all
+
+
+Plot trades:
+	-> freqtrade show-trades --db-url sqlite:///tradesv3.dryrun.sqlite --print-json
+
+ 	-> freqtrade show-trades --db-url sqlite:///tradesv3.dryrun.sqlite --trade-ids 2 3 --print-json 
+
+ 	-> python3 scripts/plot_dataframe.py -p BTC/ETH
+
+ 	-> python3 scripts/plot_dataframe.py -p BTC/ETH --indicators1 sma,ema --indicators2 macd
+
+ 	-> python3 scripts/plot_dataframe.py -p BTC/ETH,XRP/ETH
+
+ 	-> python3 scripts/plot_dataframe.py -p BTC/ETH --live
+
+ 	-> python3 scripts/plot_dataframe.py -p BTC/ETH --timerange=100-200
+
+ 	-> python3 scripts/plot_dataframe.py -s Strategy_Name -p BTC/ETH --datadir user_data/data/<exchange_name>/
+
+ 	To plot trades stored in a database use --db-url argument:
+ 		-> python3 scripts/plot_dataframe.py --db-url sqlite:///tradesv3.dry_run.sqlite -p BTC/ETH --trade-source DB
+
+ 	To plot trades from a backtesting result, use --export-filename <filename>:
+ 		-> python3 scripts/plot_dataframe.py --export-filename user_data/backtest_data/backtest-result.json -p BTC/ETH
+
+
+
+
+Download data for backtests:
+	-> freqtrade download-data 
+
+
+Create a new Configuration file:
+	-> freqtrade new-config --config config.json
+
+
+Setup Python virtual env:
+	# create virtualenv in directory /freqtrade/.env
+	python3 -m venv .env
+
+	# run virtualenv
+	source .env/bin/activate
+
+
+Running Edge independently:
+	-> freqtrade edge
+
+	Update cached pairs with the latest data:
+		-> freqtrade edge --refresh-pairs-cached
+
+	Precising stoploss range:
+		-> freqtrade edge --stoplosses=-0.01,-0.1,-0.001 #min,max,step
+
+	Advanced use of timerange:
+		-> freqtrade edge --timerange=20181110-20181113
+
+		-> freqtrade edge --timerange=-200	(last 200 timeframes from the input data)
+
+
+
+
